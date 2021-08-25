@@ -8,7 +8,7 @@ def speak(str):
 
 if __name__ == '__main__':
     speak("hi")
-    apiKey = 'd093053d72bc40248998159804e0e67d'
+    apiKey = 'apiKey'
     
     r = requests.get(f"https://newsapi.org/v2/top-headlines?country=in&apiKey={apiKey}")
     news_dict = json.loads(r.text)
@@ -17,7 +17,7 @@ if __name__ == '__main__':
     speak("let's begin")
     speak("first news")
     for items in articles:
-        # print(items['title'])
+        print(items['title'])
         speak(items['title'])
         speak("next headline")
     speak("thank u")
